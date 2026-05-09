@@ -5,6 +5,10 @@ from app.graph.workflow import app_graph
 
 router = APIRouter()
 
+@router.get("/health")
+async def health_check():
+    return {"status": "ok", "message": "API is ready!"}
+
 @router.post("/chat")
 async def chat_endpoint(req: ChatRequest):
     config = {"configurable": {"thread_id": req.session_id}}
