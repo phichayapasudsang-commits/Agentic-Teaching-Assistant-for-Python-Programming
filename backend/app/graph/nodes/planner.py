@@ -25,6 +25,6 @@ def planner_node(state: TutorState):
         plan = ["1. ทำความเข้าใจคอนเซปต์", "2. ดูตัวอย่างไวยากรณ์", "3. ลองเขียนโค้ด"]
         starting_code = "# Write your code here\n"
 
-    welcome_msg = f"เข้าใจแล้วครับ! เรามาเรียนเรื่อง '{goal}' กัน โดยแบ่งเป็น {len(plan)} ขั้นตอนง่ายๆ ทางซ้ายมือนี้นะครับ พร้อมจะเริ่มข้อแรกหรือยังครับ?"
+    welcome_msg = f"เข้าใจแล้วครับ! เรามาเรียนเรื่อง '{goal}' กันนะครับ ทางซ้ายมือนี้ผมแบ่งขั้นตอนการเรียนไว้ให้แล้ว\n\nส่วนทางขวามือคือ **Code Editor** ผมเตรียมโค้ดเริ่มต้นไว้ให้ ลองสังเกตโค้ดในช่องขวามือแล้วกดปุ่ม **Run Code** เพื่อดูผลลัพธ์ หรือจะลองแก้โค้ดเลยก็ได้นะครับ!"
     
     return {"dynamic_plan": plan, "starting_code": starting_code, "current_step": 0, "chat_history": [AIMessage(content=welcome_msg)]}
