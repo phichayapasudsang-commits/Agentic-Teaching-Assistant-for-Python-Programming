@@ -8,7 +8,7 @@ app = FastAPI(title="Agentic Python Tutor API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], # อนุญาตให้ทุกเว็บ (รวมถึง Vercel) เข้าถึง API ได้
-    allow_credentials=True,
+    allow_credentials=False, # ต้องตั้งเป็น False ถ้าใช้ allow_origins=["*"]
     allow_methods=["*"],
     allow_headers=["*"],
 )
